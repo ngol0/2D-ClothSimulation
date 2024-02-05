@@ -21,30 +21,30 @@ void point::update(float deltaTime, int win_width, int win_height)
 
 void point::keep_inside_view(int win_width, int win_height)
 {
-	if (pos.x > win_width)
+	if (pos.x >= win_width)
 	{
 		pos.x = win_width;
-		prev_pos.x = pos.x;
+		//prev_pos.x = pos.x;
 	}
-	else if (pos.x < 0)
+	else if (pos.x <= 0)
 	{
 		pos.x = 0;
-		prev_pos.x = pos.x;
+		//prev_pos.x = pos.x;
 	}
 
-	if (pos.y > win_height)
+	if (pos.y >= win_height - 10)
 	{
-		pos.y = win_height;
-		prev_pos.y = pos.y;
+		pos.y = win_height - 10;
+		//prev_pos.y = pos.y;
 	}
-	else if (pos.y < 0)
+	else if (pos.y <= 0)
 	{
 		pos.y = 0;
-		prev_pos.y = pos.y;
+		//prev_pos.y = pos.y;
 	}
 }
 
 void point::draw(renderer& draw)
 {
-	draw.drawn_point(pos.x, pos.y, 0xFF0048E3);
+	draw.drawn_point(pos.x, pos.y, 0xffffff);
 }

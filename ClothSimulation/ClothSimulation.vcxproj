@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\app.cpp" />
+    <ClCompile Include="src\cloth.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\point.cpp" />
     <ClCompile Include="src\rect.cpp" />
@@ -29,6 +30,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\app.h" />
+    <ClInclude Include="src\cloth.h" />
     <ClInclude Include="src\point.h" />
     <ClInclude Include="src\rect.h" />
     <ClInclude Include="src\renderer.h" />

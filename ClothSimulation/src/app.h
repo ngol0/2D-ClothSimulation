@@ -2,16 +2,17 @@
 #include <vector>
 #include <SDL.h>
 #include "renderer.h"
-#include "rect.h"
+#include "cloth.h"
+//#include "rect.h"
 
 class application
 {
 private:
 	renderer m_renderer;
-	rect m_rect;
+	//rect m_rect;
+	cloth m_cloth;
 
 	bool m_is_running = false;
-
 	Uint32 m_last_update_frame;
 
 public:
