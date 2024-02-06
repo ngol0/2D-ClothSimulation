@@ -1,2 +1,2 @@
-# cloth-simulation-verlet-integration
+# 2D Cloth Simulation using Verlet Integration
  
