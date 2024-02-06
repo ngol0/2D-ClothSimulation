@@ -1,16 +1,17 @@
 #pragma once
-#include "vec2.h"
+#include "global/vec2.h"
 
 class renderer;
 
-struct point
+struct particle
 {
 public:
-	point() : pos(vec2()), mass(0.f) {};
-	point(vec2 pos, float m);
+	particle() : particle(vec2(), 0.f) {};
+	particle(vec2 pos, float mass);
 
 	vec2 pos;
 	vec2 prev_pos;
+	//bool is_pinned{ false };
 	float mass;
 	vec2 force{ 0.f, 981.0f };
 	vec2 acceleration;
@@ -18,4 +19,4 @@ public:
 	void keep_inside_view(int win_width, int win_height);
 	void update(float deltaTime, int win_width, int win_height);
 	void draw(renderer& renderer);
-};
+}; 

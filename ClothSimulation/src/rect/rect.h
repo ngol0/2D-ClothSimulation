@@ -1,5 +1,5 @@
 #pragma once
-#include "point.h"
+#include "particle.h"
 #include "stick.h"
 
 class renderer;
@@ -7,7 +7,7 @@ class renderer;
 struct rect
 {
 	rect() {};
-	point points[4];
+	particle points[4];
 	stick sticks[6];
 
 	void init(renderer& renderer);

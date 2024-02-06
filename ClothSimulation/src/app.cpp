@@ -1,5 +1,6 @@
 #include <iostream>
 #include "app.h"
+#include "global/vec2.h"
 
 void application::set_up()
 {
@@ -10,9 +11,10 @@ void application::set_up()
 	float cloth_height = 320.f;
 	float cloth_spacing = 10.f;
 
-	float startX = m_renderer.get_win_width() * 0.5f - cloth_width/cloth_spacing * cloth_spacing * 0.5f;
+	float startX = m_renderer.get_win_width() * 0.5f - (cloth_width/cloth_spacing) * cloth_spacing * 0.5f;
 	float startY = m_renderer.get_win_height() * 0.1f;
-	m_cloth.init(vec2(cloth_width, cloth_height), vec2(startX, startY), cloth_spacing);
+	m_cloth.init(vec2(startX, startY), vec2(cloth_width, cloth_height), cloth_spacing);
+
 	//m_rect.init(m_renderer);
 }
 

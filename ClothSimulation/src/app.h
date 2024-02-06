@@ -2,7 +2,7 @@
 #include <vector>
 #include <SDL.h>
 #include "renderer.h"
-#include "cloth.h"
+#include "cloth/cloth.h"
 //#include "rect.h"
 
 class application

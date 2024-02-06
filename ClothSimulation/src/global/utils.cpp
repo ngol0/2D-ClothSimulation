@@ -2,7 +2,7 @@
 
 namespace utils
 {
-	float distance_point(const point& p1, const point& p2)
+	float distance_point(const particle& p1, const particle& p2)
 	{
 		float dx = p1.pos.x - p2.pos.x;
 		float dy = p1.pos.y - p2.pos.y;

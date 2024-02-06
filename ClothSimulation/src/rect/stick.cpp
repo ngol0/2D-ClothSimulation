@@ -1,9 +1,9 @@
 #include "stick.h"
 #include "renderer.h"
-#include "point.h"
-#include "utils.h"
+#include "particle.h"
+#include "global/utils.h"
 
-stick::stick(point& p1, point& p2, float length) : p1(&p1), p2(&p2), length(length)
+stick::stick(particle& p1, particle& p2, float length) : p1(&p1), p2(&p2), length(length)
 {
 	
 }

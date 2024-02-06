@@ -21,22 +21,28 @@
     <ClCompile Include="src\app.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\point.cpp">
+    <ClCompile Include="src\cloth\point.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\renderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\stick.cpp">
+    <ClCompile Include="src\rect\stick.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\rect.cpp">
+    <ClCompile Include="src\rect\rect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\utils.cpp">
+    <ClCompile Include="src\global\utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\cloth.cpp">
+    <ClCompile Include="src\cloth\cloth.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rect\particle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cloth\cloth_stick.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,25 +50,31 @@
     <ClInclude Include="src\app.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\point.h">
+    <ClInclude Include="src\cloth\point.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\renderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\vec2.h">
+    <ClInclude Include="src\global\vec2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\stick.h">
+    <ClInclude Include="src\rect\stick.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\utils.h">
+    <ClInclude Include="src\global\utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\rect.h">
+    <ClInclude Include="src\rect\rect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\cloth.h">
+    <ClInclude Include="src\cloth\cloth.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rect\particle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cloth\cloth_stick.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
