@@ -34,6 +34,37 @@ void application::input()
 				m_is_running = false;
 			}
 			break;
+		case SDL_MOUSEMOTION:
+			m_mouse.update_pos(vec2(event.motion.x, event.motion.y));
+			break;
+		case SDL_MOUSEBUTTONDOWN:
+			int x, y;
+			SDL_GetMouseState(&x, &y);
+			m_mouse.update_pos(vec2(x, y));
+
+			if (!m_mouse.left_mouse_down() && event.button.button == SDL_BUTTON_LEFT)
+				m_mouse.set_left_mouse(true);
+
+			if (!m_mouse.right_mouse_down() && event.button.button == SDL_BUTTON_RIGHT)
+				m_mouse.set_right_mouse(true);
+			break;
+		case SDL_MOUSEBUTTONUP:
+			if (m_mouse.left_mouse_down() && event.button.button == SDL_BUTTON_LEFT)
+				m_mouse.set_left_mouse(false);
+
+			if (m_mouse.right_mouse_down() && event.button.button == SDL_BUTTON_RIGHT)
+				m_mouse.set_right_mouse(false);
+			break;
+		case SDL_MOUSEWHEEL:
+			if (event.wheel.y > 0)
+			{
+				m_mouse.increase_cursor(10);
+			}
+			else if (event.wheel.y < 0)
+			{
+				m_mouse.increase_cursor(-10);
+			}
+			break;
 		}
 	}
 }
@@ -43,7 +74,7 @@ void application::update()
 	Uint32 currentTime = SDL_GetTicks();
 	float deltaTime = (currentTime - m_last_update_frame) / 1000.0f;
 
-	m_cloth.update(deltaTime, m_renderer);
+	m_cloth.update(deltaTime, m_renderer, m_mouse);
 	//m_rect.update(deltaTime, m_renderer);
 
 	m_last_update_frame = currentTime;

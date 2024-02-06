@@ -45,7 +45,7 @@ void cloth::init(vec2 start_pos, vec2 size, float spacing)
 				sticks.push_back(stick);
 			}
 
-			if (y == 0 && x % 2 == 0) 
+			if (y == 0) 
 			{
 				p->pin();
 			}
@@ -55,11 +55,11 @@ void cloth::init(vec2 start_pos, vec2 size, float spacing)
 	}
 }
 
-void cloth::update(float deltaTime, renderer& renderer)
+void cloth::update(float deltaTime, renderer& renderer, mouse& mouse)
 {
 	for (auto& p : points)
 	{
-		p->update(deltaTime, gravity, drag, elasticity, renderer.get_win_width(), renderer.get_win_height());
+		p->update(deltaTime, mouse, gravity, drag, elasticity, renderer.get_win_width(), renderer.get_win_height());
 	}
 
 	for (auto& s : sticks)

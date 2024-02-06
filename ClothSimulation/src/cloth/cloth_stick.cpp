@@ -3,26 +3,28 @@
 #include "renderer.h"
 #include "global/utils.h"
 
-cloth_stick::cloth_stick(point& p1, point& p2, float length) : p1(&p1), p2(&p2), length(length)
-{
-
-}
+cloth_stick::cloth_stick(point& p1, point& p2, float length) : p1(&p1), p2(&p2), length(length) {}
 
 void cloth_stick::update(float deltaTime)
 {
-	vec2 diff = p1->pos - p2->pos;
+	if (!b_alive) return;
+
+	vec2 diff = p1->get_pos() - p2->get_pos();
 	float dist = utils::vector_length(diff);
 	float diff_factor = (length - dist) / dist;
 	vec2 offset = diff * diff_factor * 0.5f;
 
-	p1->pos.x += offset.x;
-	p1->pos.y += offset.y;
-
-	p2->pos.x -= offset.x;
-	p2->pos.y -= offset.y;
+	p1->set_pos(p1->get_pos() + offset);
+	p2->set_pos(p2->get_pos() - offset);
 }
 
 void cloth_stick::draw(renderer& r)
 {
-	r.drawn_line(p1->pos.x, p1->pos.y, p2->pos.x, p2->pos.y, 0xfcba03);
+	if (!b_alive) return;
+	r.drawn_line(p1->get_pos().x, p1->get_pos().y, p2->get_pos().x, p2->get_pos().y, b_selected ? m_selected_color : m_cloth_color);
+}
+
+void cloth_stick::tear()
+{
+	b_alive = false;
 }

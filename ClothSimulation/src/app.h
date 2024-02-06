@@ -3,6 +3,7 @@
 #include <SDL.h>
 #include "renderer.h"
 #include "cloth/cloth.h"
+#include "cloth/mouse.h";
 //#include "rect.h"
 
 class application
@@ -11,6 +12,7 @@ private:
 	renderer m_renderer;
 	//rect m_rect;
 	cloth m_cloth;
+	mouse m_mouse;
 
 	bool m_is_running = false;
 	Uint32 m_last_update_frame;
