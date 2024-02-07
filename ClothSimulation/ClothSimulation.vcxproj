@@ -24,11 +24,8 @@
     <ClCompile Include="src\cloth\cloth_stick.cpp" />
     <ClCompile Include="src\cloth\mouse.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\rect\particle.cpp" />
     <ClCompile Include="src\cloth\point.cpp" />
-    <ClCompile Include="src\rect\rect.cpp" />
     <ClCompile Include="src\renderer.cpp" />
-    <ClCompile Include="src\rect\stick.cpp" />
     <ClCompile Include="src\global\utils.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -36,11 +33,8 @@
     <ClInclude Include="src\cloth\cloth.h" />
     <ClInclude Include="src\cloth\cloth_stick.h" />
     <ClInclude Include="src\cloth\mouse.h" />
-    <ClInclude Include="src\rect\particle.h" />
     <ClInclude Include="src\cloth\point.h" />
-    <ClInclude Include="src\rect\rect.h" />
     <ClInclude Include="src\renderer.h" />
-    <ClInclude Include="src\rect\stick.h" />
     <ClInclude Include="src\global\utils.h" />
     <ClInclude Include="src\global\vec2.h" />
   </ItemGroup>
