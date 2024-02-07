@@ -11,6 +11,13 @@ void cloth_stick::update(float deltaTime)
 
 	vec2 diff = p1->get_pos() - p2->get_pos();
 	float dist = utils::vector_length(diff);
+
+	if (dist > 20.f)
+	{
+		tear();
+		return;
+	}
+
 	float diff_factor = (length - dist) / dist;
 	vec2 offset = diff * diff_factor * 0.5f;
 
