@@ -242,7 +242,7 @@ typedef struct SDL_TextEditingEvent
     Uint32 windowID;                            /**< The window with keyboard focus, if any */
     char text[SDL_TEXTEDITINGEVENT_TEXT_SIZE];  /**< The editing text */
     Sint32 start;                               /**< The start cursor of selected editing text */
-    Sint32 length;                              /**< The length of selected editing text */
+    Sint32 m_length;                              /**< The length of selected editing text */
 } SDL_TextEditingEvent;
 
 /**
@@ -256,7 +256,7 @@ typedef struct SDL_TextEditingExtEvent
     Uint32 windowID;                            /**< The window with keyboard focus, if any */
     char* text;                                 /**< The editing text, which should be freed with SDL_free(), and will not be NULL */
     Sint32 start;                               /**< The start cursor of selected editing text */
-    Sint32 length;                              /**< The length of selected editing text */
+    Sint32 m_length;                              /**< The length of selected editing text */
 } SDL_TextEditingExtEvent;
 
 #define SDL_TEXTINPUTEVENT_TEXT_SIZE (32)

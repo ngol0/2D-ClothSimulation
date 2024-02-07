@@ -45,7 +45,7 @@ void cloth::init(vec2 start_pos, vec2 size, float spacing)
 				sticks.push_back(stick);
 			}
 
-			if (y == 0) 
+			if (y == 0 && x % 2 == 0) 
 			{
 				p->pin();
 			}
